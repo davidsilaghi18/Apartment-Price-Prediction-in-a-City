@@ -1,73 +1,63 @@
-# Apartment-Price-Prediction-in-a-City
-A project for Apartment Price Prediction in a City with python
 # 🏠 Apartment Price Prediction in a City
 
-This project uses machine learning to predict apartment prices based on their size and number of rooms. It includes data visualization, model training using Linear Regression, a graphical user interface (GUI) built with Tkinter, and an optional Windows executable (.exe) version using PyInstaller.
+This is a simple machine learning project that predicts the price of an apartment based on its size and number of rooms. It includes:
 
-## 📊 Features
+- 📊 Data visualization
+- 🧠 Model training using Linear Regression
+- 💾 Model saving/loading with Joblib
+- 🖥️ GUI (Graphical User Interface) using Tkinter
+- 🛠️ Compiled .exe version (Windows)
 
-- Predict apartment price based on size and number of rooms
-- Visualize data using Matplotlib and Seaborn
-- Train a machine learning model with scikit-learn
-- Save and load the trained model using Joblib
-- GUI application with input fields and a predict button
-- Create a .exe file to run the app without Python
+---
 
-## 🗂 Project Structure
+## 📂 Project structure
 
-Apartment Price Prediction in a City/ ├── apartments.csv # Dataset with apartment data ├── apartment.py # Main script: training, visualization, model saving ├── apartment_model.pkl # Trained model file (saved with Joblib) ├── predict_only.py # Simple prediction script for console use ├── gui_predict.py # GUI application using Tkinter └── README.md # Project documentation
+ Apartment Price Prediction in a City/ ├── apartments.csv # Dataset with apartment data ├── apartment.py # Script to train & evaluate model ├── apartment_model.pkl # Saved ML model ├── predict_only.py # Quick terminal-based prediction ├── gui_predict.py # GUI app using Tkinter └── README.md # This file
 
+ 
+---
 
-## 🚀 How to Use
+## ⚙️ How to use
 
-### Step 1 – Train the Model
+### 1. Train the model
+Run `apartment.py` to train the model and generate the file `apartment_model.pkl`.
 
-Run the following command to train the model and create the model file:
-
+```bash
 python apartment.py
 
-This will generate a file called `apartment_model.pkl`.
+2. Predict using GUI
+Run the GUI app:
 
-### Step 2 – Predict Using GUI
-
-Run the following script:
+bash
 
 python gui_predict.py
+Enter apartment size and number of rooms → you'll get an estimated price 💰
 
-A window will appear where you can enter the apartment size and number of rooms.  
-Click the "Predict Price" button to see the estimated price.
+📦 .EXE version
+The GUI version can be converted into a .exe using:
 
-### Step 3 – Predict in the Terminal
+bash
 
-If you want a simple terminal-based prediction tool, use:
 
-python predict_only.py
-
-## 🛠 Creating a .EXE File (Optional)
-
-To generate a standalone executable file for Windows:
-
-1. Install PyInstaller (if you haven't already):
-pip install pyinstaller
-
-2. Create the .exe file:
 pyinstaller --onefile --windowed gui_predict.py
+This generates gui_predict.exe in the dist/ folder (not included here).
 
-The .exe will be created inside the `dist/` folder as `gui_predict.exe`.  
-Make sure to also copy the file `apartment_model.pkl` next to the `.exe`.
+🧠 Technologies used
+Python 3
 
-## 🧠 Technologies Used
+Pandas
 
-- Python 3
-- Pandas
-- Matplotlib
-- Seaborn
-- scikit-learn
-- Tkinter
-- Joblib
-- PyInstaller
+Matplotlib
 
-## 👨‍💻 Author
+Seaborn
 
-**David Silaghi**  
-Student at Roskilde University (RUC)
+scikit-learn
+
+Tkinter
+
+Joblib
+
+PyInstaller (for .exe)
+
+🧔 Made by
+👨‍💻 David Silaghi – Student at Roskilde University (RUC)
